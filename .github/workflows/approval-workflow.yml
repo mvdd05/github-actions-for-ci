@@ -1,1 +1,5 @@
 name: Supercool approval workflow
+
+on: pull-request-review
+
+  
