@@ -1,0 +1,17 @@
+name: Supercool approval workflow
+
+on: pull-request-review
+
+jobs:
+  labelWhenApproved:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Label when approved
+      uses: pullreminders/label-when-approved
+      env:
+        APPROVALS: '1'
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ADD_LABEL: "Approval"
+  
+    
+  
